@@ -1,0 +1,189 @@
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url(../img/background__03.svg) no-repeat center fixed;
+    background-size: cover;
+}
+
+#content-empty-01 {
+    height: 30vh;
+}
+
+#content-empty-02 {
+    height: 40vh;
+}
+
+/* Section une */
+
+#content-parent-01 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+/* Div 1 */
+    
+#content-01 { 
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+    /* Ajout avec Js */
+
+    #content-step-01 {
+        animation: add 2s ease-in-out;
+    }
+
+    #content-step-02 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+
+        text-align: justify;
+
+        animation: add 2s ease-in-out;
+    }
+
+    #check-01 {
+        animation: add 2s ease-in-out;
+    }
+
+    #n-btn {
+        background-color: #33290D;
+        color: #F0F1C6;
+        text-decoration: none;
+    
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+    
+        padding: 8px 16px;
+        border-radius: 0.5em;
+        border: none;
+        box-shadow: none;
+    
+        cursor: pointer;
+        outline: none;
+
+        animation: add 2s ease-in-out;
+    }
+
+/* Div 2 */
+
+#content-02 { 
+    grid-area: 1 / 2 / 2 / 3;
+    text-align: center;
+}
+
+#c-h1 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 25px;
+    color: #33290D;
+}
+
+#c-btn,
+#c-btn:focus {
+    background-color: #33290D;
+    color: #F0F1C6;
+    text-decoration: none;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+
+    padding: 8px 16px;
+    border-radius: 0.5em;
+    border: none;
+    box-shadow: none;
+
+    cursor: pointer;
+    outline: none;
+}
+    /* Ajout avec Js */
+
+    .content-delete {
+        animation-duration: 1s;
+        animation-name: delete;
+    }
+
+
+/* Div 3 */
+
+#content-03 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+/* Section deux */
+
+#content-parent-02 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+} 
+
+#content-04 {
+    grid-area: 1 / 1 / 2 / 2;
+
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 20px;
+
+    color: #33290D;
+
+    padding-left: 10%;
+    padding-top: 5%;
+}
+
+#content-05 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+#content-06 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+    /* Ajout avec Js */
+
+    #content-plante {
+        width: 30%;
+        margin-top: -20%;
+        margin-left: 50%;
+
+        animation: add 2s ease-in-out;
+    }
+
+
+/* Animations */
+
+@keyframes delete {
+    from {
+        opacity: 100;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes add {
+    from {
+        opacity: 0;
+
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+@keyframes move {
+    from {
+        margin-top: -20%;
+        margin-left: 50%;
+    }
+    to {
+        margin-top: -40%;
+        margin-left: -40%;
+    }
+}
